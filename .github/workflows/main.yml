@@ -16,6 +16,7 @@ jobs:
       run: |
         git remote add upstream https://github.com/pengzhile/pandora-cloud-serverless.git
         git fetch upstream
-        git config pull.ff only  # 设置fast-forward only为默认选项
         git pull upstream master
+        git checkout master # 切换到你的分支
+        git merge upstream/master # 合并上游分支的改变
         git push
